@@ -113,7 +113,7 @@ for epoch in range(n_epochs):
             print(total_loss)
             imshow(generated_image)
             save_image(generated_image, "Result/generated.png")
-        return total_loss.item()
+        return total_loss
 
 
     optimizer.step(closure)
