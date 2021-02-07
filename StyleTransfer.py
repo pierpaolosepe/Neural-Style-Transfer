@@ -102,7 +102,6 @@ optimizer = optim.LBFGS([generated_image])
 
 for epoch in range(n_epochs):
     def closure():
-        print("here")
         generated_image.data.clamp_(0, 1)
         gen_features = model(generated_image)
         content_features = model(content_image)
